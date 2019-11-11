@@ -26,12 +26,10 @@ class _DicePageState extends State<DicePage> {
   int leftDiceNumber = 1;
   int rightNumber = 1;
 
-  void changeDiceFaces() {
-    setState(() {
-      leftDiceNumber = Random().nextInt(6) + 1;
-      rightNumber = Random().nextInt(6) + 1;
-    });
-  }
+  void changeDiceFaces() => setState(() {
+        leftDiceNumber = Random().nextInt(6) + 1;
+        rightNumber = Random().nextInt(6) + 1;
+      });
 
   @override
   Widget build(BuildContext context) {
